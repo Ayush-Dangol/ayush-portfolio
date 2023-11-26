@@ -35,16 +35,18 @@ const About = () => {
       });
     });
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+    const currentRef = aboutRef.current; // Copy the ref value
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, []); // Ensure you have an empty dependency array to run this effect only once
 
   return (
     <div ref={aboutRef}>
@@ -56,15 +58,16 @@ const About = () => {
       >
         <div className={`${styles.imgContainer}`}>
           <div className={`${mode} aboutImg ${styles.img}`}>
-            <Image src={Me} fill />
+            <Image src={Me} fill alt="Ayush Dangol" />
           </div>
         </div>
 
         <div className={`text-justify text-lg  ${styles.abtRight}`}>
           <div className={styles.gridContainer}>
-            {aboutMe.map((item) => {
+            {aboutMe.map((item, index) => {
               return (
                 <div
+                  key={index}
                   className={` gap-1 leading-10 ${
                     item.title === "Degree" ? "col-span-2 min-w-full" : ""
                   } ${item.title === "Email" ? "min-w-full " : ""}`}
