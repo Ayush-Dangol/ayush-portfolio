@@ -29,6 +29,7 @@ const Skills = () => {
                   fill
                   className={`grayscale hover:grayscale-0 `}
                   id={item}
+                  alt="skills"
                 />
               </div>
 
