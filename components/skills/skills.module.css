@@ -1,0 +1,31 @@
+.skills {
+  padding: 1% 20%;
+  display: flex;
+  gap: 60px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skills > span {
+  flex-basis: calc(
+    20% - 10px
+  ); /* Set the width of each item to occupy 50% of the container width with a 10px gap between items */
+  margin-bottom: 20px; /* Add some spacing between rows */
+
+  padding: 10px;
+  box-sizing: border-box; /* Include padding and border in the item's width calculation */
+}
+
+.imgContainer {
+  position: relative;
+  object-fit: contain;
+  height: 100px;
+  width: 100px;
+}
+
+@media (max-width: 400px) {
+  .skills {
+    padding: 1% 2%;
+  }
+}

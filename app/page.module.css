@@ -1,0 +1,199 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  transition: all 0.3s;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background-color: transparent; /* Change the background color of the track */
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #f0f0f0; /* Change the color of the scrollbar thumb */
+  border-radius: 4px; /* Add border-radius for a rounded thumb */
+  position: absolute !important;
+  z-index: 2 !important;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #c4c1c1; /* Change the color of the scrollbar thumb on hover */
+}
+.img {
+  animation: move 3s infinite ease alternate;
+  object-fit: cover;
+  text-align: center;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.title {
+  width: 40%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 2%;
+  line-height: 1.2;
+
+  padding-bottom: 1%;
+}
+
+.cvBtn {
+  /* border: solid rgba(94, 106, 243, 1) 2px !important; */
+  color: white !important;
+  background-color: rgba(73, 95, 161, 0.8);
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: 22px;
+  margin-top: 10px;
+  /* padding: 3% 4%; */
+  padding: 18px 28px;
+
+  transition: opacity 2s;
+}
+
+.section {
+  /* Set the height of each section to the viewport height */
+  padding-top: 62px;
+  transition: all 0.3s;
+  padding-bottom: 20px;
+  min-height: 100vh;
+
+  /* scroll-snap-align: start; */
+
+  /* padding: auto 20%; */
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  /* scroll-snap-stop: always; */
+}
+
+#about {
+  background-color: #f5f5f5;
+}
+
+#projects {
+  background-color: #e0e0e0;
+}
+
+#contact {
+  background-color: #cccccc;
+}
+
+.scroll_down {
+  position: absolute;
+  bottom: 0;
+  font-size: 70px;
+  cursor: pointer;
+  left: 50%;
+  /* transform: translateX(50%); */
+}
+/* Optional: Add a blinking cursor */
+.typewriterText {
+  /* border-right: 2px solid transparent; Creates the blinking cursor effect */
+  overflow: hidden; /* Hide overflowing characters during the animation */
+  background: linear-gradient(
+    180deg,
+    rgba(94, 106, 243, 1) 0%,
+    rgba(146, 153, 238, 1) 19%,
+    #bbb 91%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* white-space: nowrap; */
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  margin-left: 5px;
+  height: 70px; /* Adjust the height to match the font size */
+  /* Change the cursor color as needed */
+}
+
+.typewriterText,
+.cursor {
+  animation: blink 0.75s linear infinite;
+  transition: all 2s;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes erasing {
+  to {
+    width: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .home {
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+  .title {
+    width: 90%;
+    font-size: 4rem;
+  }
+
+  .img {
+    scale: 0.7;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    width: 95%;
+    font-size: 3rem;
+    margin-top: -120px;
+  }
+
+  .img {
+    width: 350px;
+    height: 380px;
+  }
+
+  .home {
+    height: 100vh;
+    padding-top: 0px;
+    justify-content: space-evenly !important;
+  }
+
+  .section {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 325px) {
+  .title {
+    font-size: 2.5rem;
+    margin-top: 5px;
+  }
+}
