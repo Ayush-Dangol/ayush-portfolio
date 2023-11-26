@@ -184,7 +184,7 @@ export default function Home() {
           </a>
         </div>
         <div className={styles.img}>
-          <Image src="/images/hi2.png" width={350} height={300} />
+          <Image src="/images/hi2.png" width={350} height={300} alt="hi" />
         </div>
       </section>
 
