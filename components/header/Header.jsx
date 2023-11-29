@@ -3,7 +3,7 @@
 import React, { useState, useContext } from "react";
 import DarkmodeToggle from "../darkmodeToggle/DarkmodeToggle";
 import { ThemeContext } from "@/app/context/ThemeContext";
-
+import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineLine } from "react-icons/ai";
 const Header = () => {
@@ -14,10 +14,22 @@ const Header = () => {
   const { mode } = useContext(ThemeContext);
   return (
     <header className={`${mode} header ${show ? "header-mobile" : ""} `}>
-      <nav className="w-full flex justify-between items-center px-4">
-        <h1 className="text-4xl title-name">AYUSH DANGOL</h1>
+      <nav className="w-full flex justify-between items-center px-4 header-nav">
+        {/* <h1 className="text-4xl title-name">AYUSH DANGOL</h1> */}
+        <Image
+          src={
+            mode === "dark"
+              ? "/images/logo-light-white.png"
+              : "/images/logo-black.png"
+          }
+          width={350}
+          height={250}
+          alt="logo"
+          className={`logo`}
+        />
+
         <div
-          className="header-hamburger"
+          className={`header-hamburger ${mode}`}
           onClick={() => {
             setShow((prev) => !prev);
           }}
