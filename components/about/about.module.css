@@ -6,6 +6,15 @@
   animation: fadeInFromLeft 1s ease;
   /* min-width: 340px; */
 }
+.icons {
+  width: 75%;
+  display: flex;
+  gap: 20px;
+}
+
+.linkedin {
+  cursor: pointer;
+}
 
 .img {
   width: 479.875px;
@@ -63,10 +72,21 @@
   }
 
   .img {
-    scale: 0.8;
+    scale: 0.75;
   }
 }
 
+@media (max-width: 400px) {
+  .img {
+    scale: 0.65;
+  }
+}
+
+@media (max-width: 330px) {
+  .img {
+    scale: 0.6;
+  }
+}
 /* .img img {
   width: 100%;
   height: 100%;

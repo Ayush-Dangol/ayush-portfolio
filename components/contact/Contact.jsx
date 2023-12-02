@@ -79,7 +79,7 @@ const Contact = () => {
                 onChange={handleChange}
               />
               <label className={styles.formLabel} htmlFor="name">
-                Full Name
+                Full Name*
               </label>
             </span>
             <span className={styles.inputContainer}>
@@ -94,7 +94,7 @@ const Contact = () => {
                 onChange={handleChange}
               />
               <label className={styles.formLabel} htmlFor="email">
-                Email
+                Email*
               </label>
             </span>
           </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                 onChange={handleChange}
               />
               <label className={styles.formLabel} htmlFor="topic">
-                Topic
+                Topic*
               </label>
             </span>
             <span className={styles.inputContainer}>
@@ -129,8 +129,11 @@ const Contact = () => {
           </div>
 
           <span className="flex flex-col w-full ">
-            <label htmlFor="message" className="mb-1 ml-3">
-              Message
+            <label
+              htmlFor="message"
+              className={`mb-1 ml-3 text-xl ${styles.messageLabel}`}
+            >
+              Message*
             </label>
             <textarea
               name="message"

@@ -28,6 +28,11 @@
   flex-grow: 1;
 }
 
+.messageLabel,
+.inputContainer label {
+  font-weight: bold;
+}
+
 .formField {
   height: 50px;
   border-radius: 10px;

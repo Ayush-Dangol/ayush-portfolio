@@ -30,7 +30,7 @@ const Skills = () => {
                 <Image
                   src={`/icons/${item}.png`}
                   fill
-                  className={`grayscale hover:grayscale-0 `}
+                  className={`grayscale transition-all hover:grayscale-0 `}
                   id={item}
                   alt={`Logo for ${item} skill`}
                 />

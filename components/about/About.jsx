@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useContext, useEffect, useRef, useState } from "react";
-
 import Me from "@/public/images/me.png";
 import styles from "./about.module.css";
 import { ThemeContext } from "@/app/context/ThemeContext";
@@ -15,9 +14,8 @@ const aboutMe = [
   { title: "Phone", data: "9377449613" },
   { title: "Address", data: "2439 Zink RD, Fairborn" },
   { title: "Email", data: "dangolice@gmail.com" },
-  { title: "DOB", data: "2001/01/31" },
-
-  { title: "Experience", data: "1 year" },
+  { title: "DOB", data: "01/31/2001" },
+  { title: "Experience", data: "1.5 year" },
   { title: "Degree", data: "BSc (Hons) Computer Networking and IT Security" },
 ];
 
@@ -84,6 +82,33 @@ const About = () => {
             experience in developing consumer-focused websites using HTML, CSS,
             JavaScript and React. Excited to pursue new companies to grow my
             skills and tackle web development challenges
+          </div>
+          <div className={styles.icons}>
+            <a
+              href="https://www.linkedin.com/in/ayush-dangol-1427541b4/"
+              target="_blank"
+              className="py-2"
+            >
+              <button className={styles.linkedin}>
+                <Image
+                  src={`/icons/linkedin.png`}
+                  width={40}
+                  height={40}
+                  alt={`Logo for linkedin`}
+                />
+              </button>
+            </a>
+
+            <a href="https://github.com/Ayush-Dangol" target="_blank">
+              <button className={styles.linkedin}>
+                <Image
+                  src={`/icons/github.png`}
+                  width={60}
+                  height={60}
+                  alt={`Logo for github`}
+                />
+              </button>
+            </a>
           </div>
         </div>
       </div>
